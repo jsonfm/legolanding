@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap');
+
+:root {
+    --yellow: rgb(249, 212, 30);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.loader {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background: var(--yellow);
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    animation: loaderanimation 2s linear infinite;
+}
+
+.loader > div{
+    height: 50px;
+    width: 50px;
+    background: white;
+    animation: vibrantdiv 1s ease-in-out infinite;
+}
+
+
+.loader div:nth-child(1){
+    animation-delay: .1s;
+}
+
+.loader div:nth-child(2){
+    animation-delay: .25s;
+}
+
+.loader div:nth-child(3){
+    animation-delay: .45s;
+}
+
+@keyframes vibrantdiv {
+    0%, 100% {
+        margin-bottom: 150px;
+    }
+    50% {
+        margin-bottom: 0;
+    }
+}
+
+@keyframes loaderanimation {
+    0% {
+        backdrop-filter: 10px;
+    }
+    100% {
+        backdrop-filter: 0px;
+        /* opacity: ; */
+    }
+}
