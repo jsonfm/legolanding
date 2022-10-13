@@ -73,7 +73,7 @@ a {
 
 .loader {
     animation: fade .6s;
-    animation-delay: 1.5s;
+    animation-delay: 1.8s;
 }
 
 .loader.disable {
@@ -117,6 +117,23 @@ header {
     grid-column: 1 / 3;
     grid-row: 1/3;
     padding: 0 80px;
+    animation: header-animation 1s forwards;
+    animation-delay: 2000ms;
+    transform: translateY(-100%);
+}
+
+@keyframes header-animation {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.logo:hover {
+    transform: rotate(720deg);
+    cursor: pointer;
 }
 
 .logo img {
@@ -135,6 +152,12 @@ header {
     font-size: .8rem;
     font-weight: 300;
     color: var(--red);
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    letter-spacing: 2px;
+    font-weight: 400;
 }
 
 
@@ -182,6 +205,8 @@ header {
     text-transform: capitalize;
     transform: rotate(-90deg);
     font-weight: 300;
+    animation: side-p-animation 1s;
+    animation-delay: 1.9s;
 }
 
 .side-content img {
@@ -189,6 +214,43 @@ header {
     grid-column: 2 / 6;
     grid-row: 1 / 2;
     z-index: 50;
+    animation: side-img-animation 2s;
+    animation-delay: 1.6s;
+}
+
+.levitation {
+    animation: levitation 2s infinite ease-in-out !important;
+    animation-delay: 0s !important;
+}
+
+@keyframes side-img-animation {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes side-p-animation {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: rotate(-90deg) translateY(0);
+    } 
+}
+
+@keyframes levitation {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-30px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
 }
 
 .side-content .block {
@@ -213,7 +275,20 @@ footer {
     max-height: 400px;
     bottom: 0;
     /* position: absolute; */
+    animation: footer-animation 1s;
+    animation-delay: 1800ms;
 }
+
+
+@keyframes footer-animation {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 
 .hero-card {
     margin-top: auto;
@@ -228,7 +303,9 @@ footer {
 
 .hero-card img {
     width: 130px;
+    margin-top: -30px;
 }
+
 .hero-card img:hover {
     transform: scale(1.2);
 }
