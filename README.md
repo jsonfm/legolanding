@@ -1,2 +1,7 @@
 ## 💛 Lego hero landingpage
-for the animations with CSS course of Platzi
+<br>
+<img 
+    src="./images/ss.png"
+/>
+<br>
+For the animations with CSS course of Platzi.
