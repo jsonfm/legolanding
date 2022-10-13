@@ -3,6 +3,6 @@ const loader = document.querySelector('.loader');
 
 window.addEventListener('load', () => {
     setTimeout(() => {
-        loader.style.display = 'none';
-    }, 2200);
+        loader.classList.add('disable');
+    }, 2000);
 })

@@ -12,6 +12,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    transition: 0.5s;
 }
 
 .loader {
@@ -69,6 +70,25 @@
 a {
     text-decoration: none;
 }
+
+.loader {
+    animation: fade .6s;
+    animation-delay: 1.5s;
+}
+
+.loader.disable {
+    display: none;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 
 /* container */
 .container {
@@ -163,6 +183,7 @@ header {
     transform: rotate(-90deg);
     font-weight: 300;
 }
+
 .side-content img {
     width: 100%;
     grid-column: 2 / 6;
@@ -202,8 +223,12 @@ footer {
     border-top-right-radius: 2rem;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .hero-card img {
     width: 130px;
+}
+.hero-card img:hover {
+    transform: scale(1.2);
 }
